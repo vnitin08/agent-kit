@@ -35,6 +35,11 @@ export const getKeysBySpaceIdArgs = (request: GetKeysBySpaceIdRequest) => {
     return writable([pagination, request.spaceId, deriveAddresses] as const);
 };
 
+const publicClient = createPublicClient({
+    chain: primaryChain,
+    transport: http(),
+});
+
 /**
  * Input schema for get keys action.
  */
@@ -52,11 +57,6 @@ export async function getKeys(
     args: z.infer<typeof GetKeysInput>
 ): Promise<string> {
     try {
-        const publicClient = createPublicClient({
-            chain: primaryChain,
-            transport: http(),
-        });
-
         if (!wardenContract?.address) {
             throw new Error("Warden contract address not found");
         }

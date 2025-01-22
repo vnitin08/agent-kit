@@ -24,9 +24,7 @@ const publicClient = createPublicClient({
 /**
  * Input schema for get keychains action.
  */
-export const GetKeychainsInput = z.object({
-    spaceId: z.number(),
-});
+export const GetKeychainsInput = z.object({});
 
 /**
  * Gets all the available keychains.

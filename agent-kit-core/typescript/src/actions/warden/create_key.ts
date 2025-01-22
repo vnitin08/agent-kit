@@ -26,7 +26,7 @@ const getSpaceById = async (spaceId: bigint) => {
     });
 };
 
-const CREATE_KEY_PROMPT = `This tool should be called when a user wants to create a new key for a given space. The user needs to provide the space ID and the keychain ID.`;
+const CREATE_KEY_PROMPT = `This tool should be called when a user wants to create a key. The user must specify the spaceId and keychainId and only one key can be created at a time.`;
 
 /**
  * Input schema for create key action.
