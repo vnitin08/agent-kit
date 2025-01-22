@@ -18,13 +18,9 @@ export const CreateSpaceInput = z.object({});
  * Creates a new space with the given name.
  *
  * @param account - The account creating the space.
- * @param args - The input arguments for the action.
  * @returns A message confirming the space creation.
  */
-export async function createSpace(
-    account: Account,
-    args: z.infer<typeof CreateSpaceInput>
-): Promise<string> {
+export async function createSpace(account: Account): Promise<string> {
     try {
         if (!wardenContract?.address) {
             throw new Error("Warden contract address not found");

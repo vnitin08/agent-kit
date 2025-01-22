@@ -19,13 +19,9 @@ export const GetSpacesInput = z.object({});
  * Gets spaces for a given account.
  *
  * @param account - The account to get the spaces for.
- * @param args - The input arguments for the action.
  * @returns A message containing the spaces information.
  */
-export async function getSpaces(
-    account: Account,
-    args: z.infer<typeof GetSpacesInput>
-): Promise<string> {
+export async function getSpaces(account: Account): Promise<string> {
     try {
         const publicClient = createPublicClient({
             chain: primaryChain,
