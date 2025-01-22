@@ -1,5 +1,5 @@
 import { WardenAgentKit } from "@wardenprotocol/warden-agent-kit-core";
-// import { WardenToolkit } from "@wardenprotocol/warden-langchain";
+import { WardenToolkit } from "@wardenprotocol/warden-langchain";
 import { HumanMessage } from "@langchain/core/messages";
 import { MemorySaver } from "@langchain/langgraph";
 import { createReactAgent } from "@langchain/langgraph/prebuilt";
@@ -23,16 +23,16 @@ async function initializeAgent() {
 
         // Configure Warden Agent Kit
         const config = {
-            privateKeyOrAccount: process.env.PRIVATE_KEY || undefined,
+            privateKeyOrAccount:
+                (process.env.PRIVATE_KEY as `0x${string}`) || undefined,
         };
 
         // Initialize Warden Agent Kit
         const agentkit = new WardenAgentKit(config);
 
         // Initialize Warden Agent Kit Toolkit and get tools
-        // const wardenToolkit = new WardenToolkit(agentkit);
-        // const tools = wardenToolkit.getTools();
-        const tools = [];
+        const wardenToolkit = new WardenToolkit(agentkit);
+        const tools = wardenToolkit.getTools();
 
         // Store buffered conversation history in memory
         const memory = new MemorySaver();
