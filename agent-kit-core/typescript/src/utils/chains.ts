@@ -62,4 +62,4 @@ export const enabledChains: [Chain, ...Chain[]] = [
  * Primary chain for the application, determined by environment
  */
 export const primaryChain =
-    process.env.PRIMARY_CHAIN === "devnet" ? wardenDevnet : wardenChiado;
+    process.env.PRIMARY_CHAIN === "chiado" ? wardenChiado : wardenDevnet;
