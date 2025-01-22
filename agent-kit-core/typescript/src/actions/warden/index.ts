@@ -1,5 +1,6 @@
 import { WardenAction, WardenActionSchemaAny } from "./warden_action";
 import { GetSpacesAction } from "./get_spaces";
+import { CreateSpaceAction } from "./create_space";
 
 /**
  * Retrieves all Warden action instances.
@@ -7,7 +8,7 @@ import { GetSpacesAction } from "./get_spaces";
  * @returns - Array of Warden action instances
  */
 export function getAllWardenActions(): WardenAction<WardenActionSchemaAny>[] {
-    return [new GetSpacesAction()];
+    return [new GetSpacesAction(), new CreateSpaceAction()];
 }
 
 export const WARDEN_ACTIONS = getAllWardenActions();

@@ -37,10 +37,10 @@ async function initializeAgent() {
         // Store buffered conversation history in memory
         const memory = new MemorySaver();
         const agentConfig = {
-            configurable: { thread_id: "CDP AgentKit Chatbot Example!" },
+            configurable: { thread_id: "Warden Agent Kit CLI Agent Example!" },
         };
 
-        // Create React Agent using the LLM and CDP AgentKit tools
+        // Create React Agent using the LLM and Warden Agent Kit tools
         const agent = createReactAgent({
             llm,
             tools,
@@ -48,7 +48,7 @@ async function initializeAgent() {
             messageModifier:
                 "You're a helpful assistant that can help with a variety of tasks related to web3 tranactions." +
                 "You should only use the provided tools to carry out tasks, interperate the users input" +
-                "and select the correct tool to use for the required tasks or tasks. If the user needs to",
+                "and select the correct tool to use for the required tasks or tasks.",
         });
 
         return { agent, config: agentConfig };
@@ -58,13 +58,6 @@ async function initializeAgent() {
     }
 }
 
-/**
- * Run the agent interactively based on user input
- *
- * @param agent - The agent executor
- * @param config - Agent configuration
- */
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 async function runChatMode(agent: any, config: any) {
     console.log("Starting chat mode... Type 'exit' to end.");
 
@@ -77,7 +70,6 @@ async function runChatMode(agent: any, config: any) {
         new Promise((resolve) => rl.question(prompt, resolve));
 
     try {
-        // eslint-disable-next-line no-constant-condition
         while (true) {
             const userInput = await question("\nPrompt: ");
 
