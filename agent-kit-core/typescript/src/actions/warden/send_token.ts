@@ -34,7 +34,7 @@ export async function sendToken(
     args: z.infer<typeof SendTokenInput>
 ): Promise<string> {
     try {
-        return `Successfully sent ${args.amount} tokens to ${args.recipient}.`;
+        return `Successfully sent ${args.amount} Sepolia ETH to ${args.recipient}.`;
         // const publicClient = createPublicClient({
         //     chain: primaryChain,
         //     transport: http(),
