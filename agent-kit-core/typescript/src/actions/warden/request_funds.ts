@@ -21,7 +21,7 @@ export async function requestFunds(
     try {
         const response = await fetch(
             `https://fapi.${
-                primaryChain.name
+                primaryChain.network
             }.wardenprotocol.org/request/${converter("warden").toBech32(
                 account.address
             )}`,
@@ -44,7 +44,7 @@ export async function requestFunds(
         const errorMessage =
             error instanceof Error ? error.message : "Unknown error";
         throw new Error(
-            `Failed to request tokens from faucet: ${errorMessage}`
+            `Failed to request tokens from faucet: ${errorMessage} using token: ${process.env.FAUCET_TOKEN}`
         );
     }
 }

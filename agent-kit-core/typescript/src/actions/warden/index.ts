@@ -6,6 +6,9 @@ import { CreateKeyAction } from "./create_key";
 import { GetKeychainsAction } from "./get_keychains";
 import { GetBalanceAction } from "./get_balance";
 import { RequestFundsAction } from "./request_funds";
+import { GetPriceAction } from "./get_price";
+import { SendTokenAction } from "./send_token";
+import { CreateOrderAction } from "./create_order";
 /**
  * Retrieves all Warden action instances.
  *
@@ -20,6 +23,9 @@ export function getAllWardenActions(): WardenAction<WardenActionSchemaAny>[] {
         new GetKeychainsAction(),
         new GetBalanceAction(),
         new RequestFundsAction(),
+        new GetPriceAction(),
+        new SendTokenAction(),
+        new CreateOrderAction(),
     ];
 }
 

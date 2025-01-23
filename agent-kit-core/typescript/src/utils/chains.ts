@@ -13,6 +13,7 @@ export const CHAIN_IDS = {
 export const wardenChiado = defineChain({
     id: CHAIN_IDS.WARDEN_CHIADO,
     name: "Warden Chiado",
+    network: "chiado",
     nativeCurrency: { name: "Ward", symbol: "WARD", decimals: 18 },
     rpcUrls: {
         default: {
@@ -27,6 +28,7 @@ export const wardenChiado = defineChain({
 export const wardenDevnet = defineChain({
     id: CHAIN_IDS.WARDEN_DEVNET,
     name: "Warden Devnet",
+    network: "devnet",
     nativeCurrency: { name: "Ward", symbol: "WARD", decimals: 18 },
     rpcUrls: {
         default: {
