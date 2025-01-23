@@ -28,7 +28,3 @@ export FAUCET_TOKEN=<faucet-token>  # Optional: Only required if you are using t
 ```bash
 npm start
 ```
-
-## License
-
-Apache-2.0
