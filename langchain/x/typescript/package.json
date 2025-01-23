@@ -1,11 +1,11 @@
 {
-  "name": "@wardenprotocol/warden-agent-kit-core",
-  "description": "Warden Agent Kit core",
+  "name": "@wardenprotocol/warden-langchain",
+  "description": "Warden Agent Kit langchain extention",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/wardenprotocol/agent-kit.git"
   },
-  "version": "0.0.21",
+  "version": "0.0.2",
   "author": "Warden Labs",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -16,8 +16,8 @@
     "build": "tsc"
   },
   "dependencies": {
-    "bech32-converting": "^1.0.9",
-    "twitter-api-v2": "^1.19.0",
+    "@langchain/core": "^0.3.33",
+    "@wardenprotocol/warden-agent-kit-core": "^0.0.21",
     "viem": "^2.22.10",
     "wagmi": "^2.14.8",
     "zod": "^3.24.1"
@@ -33,7 +33,9 @@
     }
   },
   "keywords": [
-    "agent-kit"
+    "agent-kit",
+    "langchain",
+    "warden"
   ],
   "license": "Apache-2.0",
   "bugs": {
