@@ -1,6 +1,6 @@
 {
   "name": "@wardenprotocol/warden-langchain",
-  "description": "Warden Agent Kit langchain extention",
+  "description": "Warden Agent Kit langchain extension",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/wardenprotocol/agent-kit.git"
