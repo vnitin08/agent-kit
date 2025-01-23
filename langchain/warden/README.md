@@ -2,15 +2,15 @@
 
 The **Warden Agent Kit Extension - Langchain** is a powerful package designed to integrate the capabilities of Langchain into the Warden Agent Kit. This extension enables developers to build, deploy, and manage intelligent agents that leverage natural language processing (NLP) and language models (LLMs) for advanced decision-making and automation.
 
-This package is part of the broader **Warden Agent Kit**, a suite of tools and libraries for building autonomous agents and decentralized applications. The Langchain extension provides seamless integration with Langchain's ecosystem, allowing developers to harness the power of language models in their Warden-based applications.
+This package is part of the broader **Warden Agent Kit**, a suite of tools for building autonomous agents and decentralized applications. The Langchain extension provides seamless integration with Langchain's ecosystem, allowing developers to harness the power of language models in their Warden-based applications.
 
 ---
 
 ## Features
 
 -   **Langchain Integration**: Easily integrate Langchain's language models and NLP tools into your Warden Agent Kit projects.
--   **Pre-built Tools**: Includes pre-built tools and utilities for common NLP tasks such as text generation, summarization, question answering, and more.
--   **Agent Orchestration**: Combine Langchain's capabilities with Warden's agent orchestration for advanced multi-agent systems.
+-   **Pre-built Tools**: Includes pre-built tools and utilities for common Warden Protocol releated tasks.
+-   **Agent Orchestration**: Combine Langchain and Warden Protocol capabilities for advanced multi-agent systems.
 -   **Extensible Architecture**: Designed to be modular and extensible, allowing developers to add custom functionality as needed.
 
 ---
@@ -126,12 +126,6 @@ We welcome contributions from the community! If you'd like to contribute to the 
 3. Submit a pull request with a detailed description of your changes.
 
 For more information, see our [Contributing Guidelines](https://github.com/warden-protocol/agent-kit/blob/main/CONTRIBUTING.md).
-
----
-
-## License
-
-The Warden Agent Kit Extension - Langchain is released under the [MIT License](https://github.com/warden-protocol/agent-kit/blob/main/LICENSE).
 
 ---
 
