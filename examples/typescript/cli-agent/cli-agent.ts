@@ -1,5 +1,5 @@
 import { WardenAgentKit } from "@wardenprotocol/warden-agent-kit-core";
-import { WardenToolkit } from "@wardenprotocol/warden-langchain";
+import { WardenToolkit, WardenTool } from "@wardenprotocol/warden-langchain";
 import { HumanMessage } from "@langchain/core/messages";
 import { MemorySaver } from "@langchain/langgraph";
 import { createReactAgent } from "@langchain/langgraph/prebuilt";

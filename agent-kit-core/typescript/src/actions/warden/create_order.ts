@@ -30,7 +30,7 @@ export async function createOrder(
     args: z.infer<typeof CreateOrderInput>
 ): Promise<string> {
     try {
-        return `Successfully created order`;
+        return `Feature coming soon! Keep an eye out for updates.`;
     } catch (error) {
         return `Error creating order: ${error}`;
     }
