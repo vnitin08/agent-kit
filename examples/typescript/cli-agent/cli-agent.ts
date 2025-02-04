@@ -4,6 +4,7 @@ import { HumanMessage } from "@langchain/core/messages";
 import { MemorySaver } from "@langchain/langgraph";
 import { createReactAgent } from "@langchain/langgraph/prebuilt";
 import { ChatOpenAI } from "@langchain/openai";
+// import { ChatOllama } from "@langchain/ollama";
 import * as dotenv from "dotenv";
 import * as readline from "readline";
 
@@ -20,6 +21,33 @@ async function initializeAgent() {
         const llm = new ChatOpenAI({
             model: "gpt-4o-mini",
         });
+
+        // const llm = new ChatOpenAI(
+        //     {
+        //         modelName: "google/gemini-2.0-flash-exp:free",
+        //         openAIApiKey: process.env.OPENROUTER_API_KEY,
+        //     },
+        //     {
+        //         basePath: "https://openrouter.ai/api/v1",
+        //     }
+        // );
+
+        // const llm = new ChatOllama({
+        //     model: "llama-3.2-3b",
+        //     temperature: 0,
+        //     maxRetries: 2,
+        //     baseUrl: "https://ai.devnet.wardenprotocol.org/openai/v1",
+        // });
+
+        // const llm = new ChatOpenAI({
+        //     modelName: "llama-3.1-8b-instruct-fp8-l4",
+        //     temperature: 0,
+        //     maxRetries: 2,
+        //     apiKey: "thisIsIgnored",
+        //     configuration: {
+        //         baseURL: "https://ai.devnet.wardenprotocol.org/openai/v1",
+        //     },
+        // });
 
         // Configure Warden Agent Kit
         const config = {
